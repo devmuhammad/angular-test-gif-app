@@ -19,7 +19,13 @@ describe('SearchFieldComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
+
+  it('Search Field Test: should correctly render the entered value ', () => {
+    component.searchKey = 'test input';
+    fixture.detectChanges();
+    expect(fixture.nativeElement.innerText).toBe('test input');
   });
 });

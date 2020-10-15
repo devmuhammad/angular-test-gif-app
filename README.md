@@ -1,6 +1,22 @@
-# GifApp
+# Devmuhammad Gif Search App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+
+## Purpose of Document
+This is a documentation of the above-mentioned software application developed as a test app by @devmuhammad.
+
+## Application Overview
+Gif Search app is an implementation of the giphy images via the API provided to search and return detailed list of images to the user.
+
+## Tools
+Gif Search app front-end was developed with AngularJs 7. Using the Tailwind CSS. Other dependencies & plugins can be found in the package.json file. It was developed using the IDE - Visual studio code.
+
+## Coding Structure
+The code was structured in line with the standard. A “src” tree parent folder with “app” that contains all standalone components.
+
+## Deployment
+This app has been deployed to a netlify server at gifsearch.netlify.app
+
 
 ## Development server
 
