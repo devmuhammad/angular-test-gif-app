@@ -86,6 +86,11 @@ export class SearchFieldComponent implements OnInit {
         this.showResult = true
     }
 
+    research(){
+        this.showResult = false
+        this.searched = false
+     }
+
     clearSearch(){
         this.searchKey = ''
         
