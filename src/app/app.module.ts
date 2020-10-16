@@ -27,9 +27,10 @@ import { FooterComponent } from './footer/footer.component';
     LoadingBarModule,
     NgReduxModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [NgReduxModule, LoadingBarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

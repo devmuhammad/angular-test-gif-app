@@ -3,7 +3,9 @@ import { TestBed } from '@angular/core/testing';
 import { of, Observable } from 'rxjs'; 
 import { ImagesService } from './images.service';
 import {searchResult} from '../store/interface'
-import { select } from '@angular-redux/store';
+import { HttpClientModule } from '@angular/common/http';
+import { NgRedux } from '@angular-redux/store';
+import {LoadingBarService} from "ngx-loading-bar";
 
 describe('ImagesService', () => {
   let imagesService: ImagesService; 
@@ -11,7 +13,8 @@ describe('ImagesService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-    providers: [ImagesService]
+    imports:[HttpClientModule], 
+    providers: [ImagesService, NgRedux, LoadingBarService]
   })
   imagesService = TestBed.get(ImagesService);
 });
@@ -29,14 +32,13 @@ describe('ImagesService', () => {
             limit:25,
             offset:0
       }
-
-      // spyOn(imagesService, 'searchImages').and.returnValue(of(srchRes));
-
-      await imagesService.searchImages(search)
-      
       let response : searchResult;
 
-      expect(response.length).toEqual(25);
+      spyOn(imagesService, 'searchImages').and.returnValue(of(response.data));
+
+      await imagesService.searchImages(search)
+
+      expect(response.data.length).toEqual(25);
     });
   });
 });

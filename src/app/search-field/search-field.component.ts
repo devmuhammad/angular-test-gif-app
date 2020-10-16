@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,Input, OnInit, OnChanges } from '@angular/core';
 
 import {LoadingBarService} from "ngx-loading-bar";
 import { GetItems } from '../store/actions';
@@ -34,8 +34,11 @@ export class SearchFieldComponent implements OnInit {
     @select('items') srchResults$: Observable<searchResult>
     srchResults: searchResult;
 
+    // @Output()
+
     ngOnInit() {
         this.srchResults$.subscribe(srchResults => this.srchResults = srchResults)
+
     }
 
     async searchImages(){
