@@ -11,7 +11,7 @@
         </div>
         <div class="w-4/5  lg:max-w-xl ">
             <div class="relative mr-6 my-2 flex-1 w-full">
-                <input required id="srchinput" [(ngModel)]="searchKey" (keyup.enter)="searchImages()" type="search" class="bg-gray-100 flex-1 focus:bg-white w-full font-bold shadow-xl text-gray-800 rounded-xl border-0 p-4" placeholder="Type Something.....">
+                <input required id="srchinput" (ngModelChange)="research()" [(ngModel)]="searchKey" (keyup.enter)="searchImages()" type="search" class="bg-gray-100 flex-1 focus:bg-white w-full font-bold shadow-xl text-gray-800 rounded-xl border-0 p-4" placeholder="Type Something.....">
                 <div class="absolute pin-r pin-t bg-teal-300 rounded-xl inset-y-0 right-0 flex items-center">
                     <span *ngIf="searched == false"class=" p-4 text-teal-800 cursor-pointer"(click)="searchImages()" ><i class="fa fa-search fa-1x"></i> </span>
                     <span *ngIf="searched == true"class=" p-4 text-teal-800 cursor-pointer" (click) ="clearSearch()"><i class="fa fa-close fa-1x"></i> </span>
