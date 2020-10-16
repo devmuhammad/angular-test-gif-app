@@ -15,7 +15,7 @@ Gif Search app front-end was developed with AngularJs 7. Using the Tailwind CSS.
 The code was structured in line with the standard. A “src” tree parent folder with “app” that contains all standalone components.
 
 ## Deployment
-This app has been deployed to a netlify server at gifsearch.netlify.app
+This app has been deployed to a netlify server at moh-gif-search.netlify.app
 
 
 ## Development server
