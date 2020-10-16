@@ -9,7 +9,7 @@ import { searchResult } from '../store/interface'
 export class ResultsListComponent implements OnInit {
 
   constructor() { }
-  @Input() imgDetails: searchResult;
+  @Input() imgDetails: any;
 
   ngOnInit() {
   }
